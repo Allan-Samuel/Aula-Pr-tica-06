@@ -2,8 +2,6 @@ DROP TABLE IF EXISTS reservas;
 
 -- CRIANDO O DATABASE E AS TABELAS ATUALIZADAS
 CREATE DATABASE estacionamento
-CHARACTER SET utf8mb4
-COLLATE utf8mb4_unicode_ci;
 USE estacionamento;
 
 CREATE TABLE cliente (
@@ -14,6 +12,7 @@ CREATE TABLE cliente (
 ) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE carro (
+    id_carro INT AUTO_INCREMENT PRIMARY KEY,
     placa VARCHAR(10) PRIMARY KEY,
     modelo VARCHAR(50) NOT NULL,
     cor VARCHAR(20),
